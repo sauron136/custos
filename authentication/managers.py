@@ -3,7 +3,7 @@ from django.contrib.auth.models import BaseUserManager
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
-
+from django.db import models
 
 class CustomUserManager(BaseUserManager):
     """Custom manager for User model"""

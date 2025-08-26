@@ -204,7 +204,7 @@ def cleanup_expired_tokens():
 
 def create_user_activity_log(user, action, ip_address, user_agent, details=None):
     """Create a log entry for user activities"""
-    from .models import UserActivityLog
+    from accounts.models import UserActivityLog
     
     try:
         UserActivityLog.objects.create(
