@@ -129,7 +129,7 @@ class RefreshToken(models.Model):
     """Model to track refresh tokens"""
     
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='refresh_tokens')
-    token = models.CharField(max_length=255, unique=True)
+    token = models.TextField(unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     expires_at = models.DateTimeField()
     is_revoked = models.BooleanField(default=False)
